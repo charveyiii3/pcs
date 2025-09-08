@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCS Pet Shipper - Premium Pet Transportation Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>PCS Pet Shipper</h1>
+                    <span>Premium Pet Transport</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#tracking" class="track-link">Track My Pet</a></li>
+                </ul>
+                <a href="book-transport.html" class="cta-button" style="text-decoration: none; display: inline-block;">Get Quote</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Safe, Comfortable Pet Transportation</h2>
+                    <p>We provide premium door-to-door pet shipping services with the highest standards of care and safety. Your beloved companion deserves nothing less than first-class treatment.</p>
+                    <div class="hero-buttons">
+                        <a href="book-transport.html" class="primary-btn" style="text-decoration: none; display: inline-block;">Book Transport</a>
+                        <button class="secondary-btn" onclick="showTracking()">Track My Pet</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/generate_a_photo_of_a_happy_german_shepherd_but_make_it_realistic_and_not_too_animated_0n85repz6ra0u6xq9d01_1.png" alt="Happy German Shepherd in transport" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="trust-indicators">
+            <div class="container">
+                <div class="indicators">
+                    <div class="indicator">
+                        <h3>10K+</h3>
+                        <p>Pets Safely Transported</p>
+                    </div>
+                    <div class="indicator">
+                        <h3>99.8%</h3>
+                        <p>On-Time Delivery</p>
+                    </div>
+                    <div class="indicator">
+                        <h3>24/7</h3>
+                        <p>Monitoring & Support</p>
+                    </div>
+                    <div class="indicator">
+                        <h3>15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Premium Services</h2>
+                    <p>Comprehensive pet transportation solutions tailored to your needs</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck" style="font-size: 48px; color: #2563eb; background: #eff6ff; padding: 20px; border-radius: 12px;"></i>
+                        </div>
+                        <h3>Domestic Shipping</h3>
+                        <p>Safe ground and air transport within the country with real-time tracking and climate-controlled vehicles.</p>
+                        <ul>
+                            <li>Door-to-door service</li>
+                            <li>Real-time GPS tracking</li>
+                            <li>Climate controlled</li>
+                            <li>Veterinary certified</li>
+                        </ul>
+                    </div>
+                    <div class="service-card featured">
+                        <div class="service-icon">
+                            <i class="fas fa-globe-americas" style="font-size: 48px; color: #059669; background: #ecfdf5; padding: 20px; border-radius: 12px;"></i>
+                        </div>
+                        <h3>International Shipping</h3>
+                        <p>Expert international pet relocation with full customs and documentation support for worldwide destinations.</p>
+                        <ul>
+                            <li>Customs documentation</li>
+                            <li>Health certifications</li>
+                            <li>Quarantine coordination</li>
+                            <li>Global network</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-ambulance" style="font-size: 48px; color: #dc2626; background: #fef2f2; padding: 20px; border-radius: 12px;"></i>
+                        </div>
+                        <h3>Emergency Transport</h3>
+                        <p>24/7 emergency pet transportation for urgent medical or relocation needs with immediate response.</p>
+                        <ul>
+                            <li>24/7 availability</li>
+                            <li>Veterinary escorts</li>
+                            <li>Express delivery</li>
+                            <li>Medical equipment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Pet Parents Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"PCS Pet Shipper made our cross-country move stress-free. They treated Luna like family and kept us updated every step of the way."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-img" style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">
+                                    SJ
+                                </div>
+                                <div>
+                                    <h4>Sarah Johnson</h4>
+                                    <span>Golden Retriever Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Professional, caring, and reliable. They handled all the paperwork for our international move and our cats arrived safely in Germany."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-img" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">
+                                    MC
+                                </div>
+                                <div>
+                                    <h4>Michael Chen</h4>
+                                    <span>Cat Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"When our dog needed emergency transport to a specialist, PCS Pet Shipper was there within hours. They saved Buddy's life."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-img" style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px;">
+                                    JM
+                                </div>
+                                <div>
+                                    <h4>Jennifer Martinez</h4>
+                                    <span>Dog Owner</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Why Choose PCS Pet Shipper?</h2>
+                        <p>With over 15 years of experience in pet transportation, we understand that your pets are family. Our team of certified animal handling specialists ensures every journey is safe, comfortable, and stress-free.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <h4>Licensed & Insured</h4>
+                                <p>Fully licensed pet transportation company with comprehensive insurance coverage.</p>
+                            </div>
+                            <div class="feature">
+                                <h4>Veterinary Network</h4>
+                                <p>Partnerships with veterinarians worldwide for health certifications and emergency care.</p>
+                            </div>
+                            <div class="feature">
+                                <h4>Climate Controlled</h4>
+                                <p>All vehicles feature climate control and monitoring systems for optimal comfort.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/Sarah with pet.jpeg" alt="Sarah with pet - PCS Pet Shipper team" class="about-img" style="width: 100%; height: auto; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Get Your Free Quote Today</h2>
+                        <p>Ready to book safe, reliable transportation for your pet? Contact us for a personalized quote.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h4>Email</h4>
+                                <p>info@pcspetshipper.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Hours</h4>
+                                <p>24/7 Emergency Available<br>Office: Mon-Fri 8AM-6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                                <input type="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Phone Number">
+                                <select required>
+                                    <option value="">Service Type</option>
+                                    <option value="domestic">Domestic Shipping</option>
+                                    <option value="international">International Shipping</option>
+                                    <option value="emergency">Emergency Transport</option>
+                                </select>
+                            </div>
+                            <textarea placeholder="Tell us about your pet and transportation needs" rows="4"></textarea>
+                            <button type="submit" class="primary-btn">Get Free Quote</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Form Modal -->
+        <div id="quoteModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeQuoteForm()">&times;</span>
+                <h2>Get Your Free Quote</h2>
+                <form id="quoteForm" class="detailed-quote-form">
+                    <div class="form-section">
+                        <h3>Contact Information</h3>
+                        <div class="form-group">
+                            <label for="fullName">Full Name*</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Please include your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address*</label>
+                            <input type="email" id="email" name="email" placeholder="Please double check address is correct" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone (Please include country code if outside USA)*</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Travel Information</h3>
+                        <div class="form-group">
+                            <label for="travelFrom">Where is your pet traveling from? (City and State)*</label>
+                            <input type="text" id="travelFrom" name="travelFrom" placeholder="Enter the city where your pet is now" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelTo">Where is your pet traveling to?*</label>
+                            <input type="text" id="travelTo" name="travelTo" placeholder="What city, state, or country is your pet traveling to?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travelDate">When is your pet travelling?*</label>
+                            <input type="text" id="travelDate" name="travelDate" placeholder="Enter approximate travel dates" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="military">Military/PCS Orders Related Travel?*</label>
+                            <select id="military" name="military" required>
+                                <option value="">Please select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Pet Information</h3>
+                        <p class="form-note">For multiple pets, separate with info with commas please. (Measurements not required for cats)</p>
+                        <div class="form-group">
+                            <label for="petNames">Pet Name(s)</label>
+                            <input type="text" id="petNames" name="petNames" placeholder="Enter pet Name(s)">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="petLength">Length of pet from tip of nose to base of tail (do not include tail please).*</label>
+                                <input type="number" id="petLength" name="petLength" placeholder="Enter length in inches" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="petWidth">Width of your pet across the shoulders.*</label>
+                                <input type="number" id="petWidth" name="petWidth" placeholder="Enter width in inches" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="petHeight">Height of pet when sitting to top of head (include ears if they stick up).*</label>
+                                <input type="number" id="petHeight" name="petHeight" placeholder="Enter sitting height in inches" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="petWeight">Pet's weight</label>
+                                <input type="number" id="petWeight" name="petWeight" placeholder="Enter weight in pounds">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="petBreed">What is your pets breed?*</label>
+                                <input type="text" id="petBreed" name="petBreed" placeholder="Enter breed" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="petAge">How old is your pet?*</label>
+                                <input type="text" id="petAge" name="petAge" placeholder="Enter age" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="crateDimensions">Crate Dimensions</label>
+                            <input type="text" id="crateDimensions" name="crateDimensions" placeholder="If you have travel crates already please include the length of each crate">
+                        </div>
+                        <div class="form-group">
+                            <label for="additionalInfo">Anything else we should know?</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Share any other details here"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="primary-btn">Submit Quote Request</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Tracking Modal -->
+        <div id="trackingModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeTracking()">&times;</span>
+                <h2>Track Your Pet</h2>
+                <div class="tracking-options">
+                    <div class="tracking-method">
+                        <h3>Track by Airway Bill</h3>
+                        <form class="tracking-form">
+                            <input type="text" placeholder="Enter Airway Bill Number" required>
+                            <button type="submit" class="primary-btn">Track Pet</button>
+                        </form>
+                    </div>
+                    <div class="tracking-divider">OR</div>
+                    <div class="tracking-method">
+                        <h3>Track by Internal Device</h3>
+                        <form class="tracking-form">
+                            <input type="text" placeholder="Enter Tracking Device ID" required>
+                            <button type="submit" class="primary-btn">Track Pet</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="trackingResults" class="tracking-results" style="display: none;">
+                    <h3>Tracking Results</h3>
+                    <div class="tracking-status">
+                        <div class="status-item">
+                            <h4>Current Location</h4>
+                            <p id="currentLocation">Loading...</p>
+                        </div>
+                        <div class="status-item">
+                            <h4>Status</h4>
+                            <p id="shipmentStatus">Loading...</p>
+                        </div>
+                        <div class="status-item">
+                            <h4>Last Updated</h4>
+                            <p id="lastUpdated">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add separate tracking section -->
+        <section id="tracking" class="tracking-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Track Your Pet</h2>
+                    <p>Stay connected with your pet's journey using our real-time tracking system</p>
+                </div>
+                <div class="tracking-cards">
+                    <div class="tracking-card">
+                        <h3>Airway Bill Tracking</h3>
+                        <p>Use your airline waybill number to track your pet's flight status and location.</p>
+                        <button class="primary-btn" onclick="showTracking()">Track by Airway Bill</button>
+                    </div>
+                    <div class="tracking-card">
+                        <h3>GPS Device Tracking</h3>
+                        <p>Track your pet's real-time location using our internal GPS monitoring devices.</p>
+                        <button class="primary-btn" onclick="showTracking()">Track by GPS Device</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <h3>PCS Pet Shipper</h3>
+                        <p>Premium Pet Transportation Services</p>
+                    </div>
+                    <p>Licensed, insured, and dedicated to the safe transport of your beloved pets worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Domestic Shipping</li>
+                        <li>International Relocation</li>
+                        <li>Emergency Transport</li>
+                        <li>Custom Solutions</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li>Track Your Pet</li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | <a href="privacy-policy.html" style="color: #9ca3af;">Privacy Policy</a> | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functionality
+        function showQuoteForm() {
+            document.getElementById('quoteModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuoteForm() {
+            document.getElementById('quoteModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function showTracking() {
+            document.getElementById('trackingModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTracking() {
+            document.getElementById('trackingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const quoteModal = document.getElementById('quoteModal');
+            const trackingModal = document.getElementById('trackingModal');
+            if (event.target == quoteModal) {
+                closeQuoteForm();
+            }
+            if (event.target == trackingModal) {
+                closeTracking();
+            }
+        }
+
+        // Form submission handlers
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
+        });
+
+        // Contact form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
+        });
+
+        // Tracking form handlers
+        document.querySelectorAll('.tracking-form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const trackingNumber = this.querySelector('input').value;
+                if (trackingNumber) {
+                    // Simulate tracking results
+                    showTrackingResults(trackingNumber);
+                }
+            });
+        });
+
+        function showTrackingResults(trackingNumber) {
+            const resultsDiv = document.getElementById('trackingResults');
+            const locations = ['Dallas, TX', 'Denver, CO', 'Los Angeles, CA', 'Phoenix, AZ', 'Atlanta, GA'];
+            const statuses = ['In Transit', 'At Facility', 'Out for Delivery', 'Customs Clearance'];
+            
+            // Simulate tracking data
+            document.getElementById('currentLocation').textContent = locations[Math.floor(Math.random() * locations.length)];
+            document.getElementById('shipmentStatus').textContent = statuses[Math.floor(Math.random() * statuses.length)];
+            document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
+            
+            resultsDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
