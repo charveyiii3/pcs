@@ -417,7 +417,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | <a href="privacy-policy.html" style="color: #9ca3af;">Privacy Policy</a> | Terms of Service</p>
+                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
@@ -441,8 +441,20 @@
         document.getElementById('landingQuoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Redirect to thank you page
-            window.location.href = 'thankyou.html';
+            // Show success message
+            const formContainer = document.querySelector('.form-container');
+            formContainer.innerHTML = `
+                <div style="text-align: center; padding: 40px;">
+                    <i class="fas fa-check-circle" style="font-size: 64px; color: #059669; margin-bottom: 20px;"></i>
+                    <h2 style="color: #059669; margin-bottom: 20px;">Quote Request Submitted!</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px;">Thank you for choosing PCS Pet Shipper. We'll review your information and send you a detailed quote within 24 hours.</p>
+                    <p>Check your email for confirmation and next steps.</p>
+                    <a href="index.html" class="primary-btn" style="margin-top: 20px; display: inline-block; padding: 12px 24px; text-decoration: none;">Return to Home</a>
+                </div>
+            `;
+            
+            // Scroll to the success message
+            formContainer.scrollIntoView({ behavior: 'smooth' });
         });
 
         // Add form validation styling
