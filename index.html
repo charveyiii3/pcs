@@ -7,6 +7,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Ads Global Tag (gtag.js) - Simplified Implementation -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17538330823"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17538330823');
+    </script>
 </head>
 <body>
     <header class="header">
@@ -41,7 +50,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/generate_a_photo_of_a_happy_german_shepherd_but_make_it_realistic_and_not_too_animated_0n85repz6ra0u6xq9d01_1.png" alt="Happy German Shepherd in transport" class="hero-img">
+                    <img src="/assets/images/german-shepherd-hero.png" alt="Happy German Shepherd in transport" class="hero-img" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NzNiOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkhhcHB5IEdlcm1hbiBTaGVwaGVyZDwvdGV4dD48L3N2Zz4='">
                 </div>
             </div>
         </section>
@@ -191,7 +200,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="assets/images/Sarah with pet.jpeg" alt="Sarah with pet - PCS Pet Shipper team" class="about-img" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="/assets/images/sarah-with-pet.jpeg" alt="Sarah with pet - PCS Pet Shipper team" class="about-img" style="width: 100%; height: auto; border-radius: 8px;" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzY2NzNiOSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNhcmFoIHdpdGggUGV0PC90ZXh0Pjwvc3ZnPic='">
                     </div>
                 </div>
             </div>
@@ -215,7 +224,7 @@
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form>
+                        <form id="contactForm">
                             <div class="form-group">
                                 <input type="text" placeholder="Your Name" required>
                                 <input type="email" placeholder="Email Address" required>
@@ -424,6 +433,7 @@
                     <ul>
                         <li>Track Your Pet</li>
                         <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li>Contact Us</li>
                     </ul>
                 </div>
@@ -438,7 +448,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | <a href="privacy-policy.html" style="color: #9ca3af;">Privacy Policy</a> | Terms of Service</p>
             </div>
         </div>
     </footer>
@@ -480,8 +490,26 @@
         // Form submission handlers
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your quote request! We will contact you within 24 hours.');
-            closeQuoteForm();
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
+        });
+
+        // Contact form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Track Google Ads conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17538330823/contact_form_submit',
+                    'value': 1.0,
+                    'currency': 'USD'
+                });
+                console.log('Google Ads conversion tracked: contact_form_submit');
+            }
+            
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
         });
 
         // Tracking form handlers
@@ -509,5 +537,8 @@
             resultsDiv.style.display = 'block';
         }
     </script>
+    
+    <!-- Image Management Script -->
+    <script src="/assets/images/check-images.js"></script>
 </body>
 </html>

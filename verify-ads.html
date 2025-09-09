@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads Verification - PCS Pet Shipper</title>
+    
+    <!-- Google Ads Global Tag (gtag.js) - Enhanced Implementation -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17538330823"></script>
+    <script>
+      // Initialize dataLayer before anything else
+      window.dataLayer = window.dataLayer || [];
+      
+      // Define gtag function
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      
+      // Configure gtag
+      gtag('js', new Date());
+      gtag('config', 'AW-17538330823', {
+        'send_page_view': true,
+        'debug_mode': true
+      });
+      
+      // Verify implementation
+      console.log('🎯 Google Ads Tag Manager initialized - AW-17538330823');
+      console.log('📊 DataLayer:', window.dataLayer);
+      
+      // Test if gtag is working
+      gtag('event', 'page_view', {
+        'page_title': 'Verification Page',
+        'page_location': window.location.href,
+        'custom_parameter': 'verification_test'
+      });
+      
+      console.log('✅ Page view event sent to Google Ads');
+      
+      // Make gtag globally available for debugging
+      window.gtag = gtag;
+    </script>
+    
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            background: #f8f9fa;
+        }
+        .status-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .success { border-left: 5px solid #28a745; }
+        .error { border-left: 5px solid #dc3545; }
+        .warning { border-left: 5px solid #ffc107; }
+        .info { border-left: 5px solid #17a2b8; }
+        .code { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            border-radius: 8px; 
+            font-family: monospace; 
+            margin: 15px 0;
+        }
+        .big-text { font-size: 2em; text-align: center; margin: 20px 0; }
+        .button { 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            padding: 12px 24px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            margin: 10px;
+        }
+        .button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>🎯 Google Ads Verification Tool</h1>
+    
+    <div class="status-card info">
+        <h2>Google Ads Account ID</h2>
+        <div class="big-text"><strong>AW-17538330823</strong></div>
+    </div>
+    
+    <div class="status-card" id="tag-status">
+        <h2>Tag Status</h2>
+        <p id="status-text">Checking...</p>
+    </div>
+    
+    <div class="status-card">
+        <h2>Manual Tests</h2>
+        <button class="button" onclick="testConversion()">Fire Test Conversion</button>
+        <button class="button" onclick="testEvent()">Fire Test Event</button>
+        <button class="button" onclick="showDataLayer()">Show DataLayer</button>
+    </div>
+    
+    <div class="status-card warning">
+        <h2>⚠️ If Tag Still Not Detected</h2>
+        <ol>
+            <li><strong>Clear browser cache</strong> and hard refresh (Ctrl+F5)</li>
+            <li><strong>Disable ad blockers</strong> temporarily</li>
+            <li><strong>Try different browser</strong> (Chrome without extensions)</li>
+            <li><strong>Check in incognito mode</strong></li>
+            <li><strong>Wait 24-48 hours</strong> for Google Ads to process data</li>
+        </ol>
+    </div>
+    
+    <div class="status-card info">
+        <h2>📋 Copy This Code to Other Pages</h2>
+        <div class="code">
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=AW-17538330823"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17538330823');
+&lt;/script&gt;
+        </div>
+        <p><strong>Place this code in the &lt;head&gt; section of every page BEFORE the closing &lt;/head&gt; tag.</strong></p>
+    </div>
+    
+    <div class="status-card">
+        <h2>🌐 Live Test</h2>
+        <p>This page should show up in Google Tag Assistant as having the Google Ads tag.</p>
+        <p><strong>URL to test:</strong> <span id="current-url"></span></p>
+    </div>
+
+    <script>
+        // Show current URL
+        document.getElementById('current-url').textContent = window.location.href;
+        
+        // Check tag status
+        function checkTagStatus() {
+            const statusCard = document.getElementById('tag-status');
+            const statusText = document.getElementById('status-text');
+            
+            if (typeof gtag !== 'undefined' && window.dataLayer && window.dataLayer.length > 0) {
+                statusCard.className = 'status-card success';
+                statusText.innerHTML = '✅ <strong>Google Ads tag is working!</strong><br>gtag function available, dataLayer has ' + window.dataLayer.length + ' items';
+                console.log('✅ Tag verification successful');
+            } else {
+                statusCard.className = 'status-card error';
+                statusText.innerHTML = '❌ <strong>Google Ads tag not detected</strong><br>Check console for errors';
+                console.log('❌ Tag verification failed');
+            }
+        }
+        
+        // Test functions
+        function testConversion() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17538330823/test_conversion_action',
+                    'value': 99.99,
+                    'currency': 'USD'
+                });
+                alert('✅ Test conversion fired! Check Google Ads for data (may take 24-48 hours)');
+                console.log('🎯 Test conversion event sent');
+            } else {
+                alert('❌ gtag not available');
+            }
+        }
+        
+        function testEvent() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'custom_test_event', {
+                    'event_category': 'verification',
+                    'event_label': 'manual_test',
+                    'value': 1
+                });
+                alert('✅ Test event fired!');
+                console.log('📊 Test event sent');
+            } else {
+                alert('❌ gtag not available');
+            }
+        }
+        
+        function showDataLayer() {
+            if (window.dataLayer) {
+                console.log('📊 DataLayer contents:', window.dataLayer);
+                alert('DataLayer logged to console. Check developer tools (F12).');
+            } else {
+                alert('❌ DataLayer not available');
+            }
+        }
+        
+        // Run check after page loads
+        window.addEventListener('load', function() {
+            setTimeout(checkTagStatus, 2000);
+        });
+        
+        // Log page load
+        console.log('🔍 Google Ads Verification Page Loaded');
+        console.log('🌐 Current URL:', window.location.href);
+        console.log('📱 User Agent:', navigator.userAgent);
+    </script>
+</body>
+</html>
