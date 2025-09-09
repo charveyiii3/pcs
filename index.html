@@ -7,26 +7,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Ads Global Tag (gtag.js) - Simplified Implementation -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17538330823"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17538330823');
-    </script>
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="./assets/images/patriotic-pet-shipper-logo.png" alt="PCS Pet Shipper Logo" class="logo-img">
-                    <div class="logo-text">
-                        <h1>PCS Pet Shipper</h1>
-                        <span>Premium Pet Transport</span>
-                    </div>
+                    <h1>PCS Pet Shipper</h1>
+                    <span>Premium Pet Transport</span>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
@@ -53,7 +41,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="./assets/images/german-shepherd-hero.png" alt="Happy German Shepherd in transport" class="hero-img">
+                    <img src="saved-projects/pet-transport-website/generate_a_photo_of_a_happy_german_shepherd_but_make_it_realistic_and_not_too_animated_0n85repz6ra0u6xq9d01_1.png" alt="Happy German Shepherd in transport" class="hero-img">
                 </div>
             </div>
         </section>
@@ -203,7 +191,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="./assets/images/sarah-with-pet.jpeg" alt="Sarah with pet - PCS Pet Shipper team" class="about-img" style="width: 100%; height: auto; border-radius: 8px;">
+                        <img src="saved-projects/pet-transport-website/Sarah with pet.jpeg" alt="Sarah with pet - PCS Pet Shipper team" class="about-img" style="width: 100%; height: auto; border-radius: 8px;">
                     </div>
                 </div>
             </div>
@@ -227,7 +215,7 @@
                         </div>
                     </div>
                     <div class="contact-form">
-                        <form id="contactForm">
+                        <form>
                             <div class="form-group">
                                 <input type="text" placeholder="Your Name" required>
                                 <input type="email" placeholder="Email Address" required>
@@ -417,11 +405,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="logo">
-                        <img src="./assets/images/patriotic-pet-shipper-logo.png" alt="PCS Pet Shipper Logo" class="footer-logo-img">
-                        <div class="logo-text">
-                            <h3>PCS Pet Shipper</h3>
-                            <p>Premium Pet Transportation Services</p>
-                        </div>
+                        <h3>PCS Pet Shipper</h3>
+                        <p>Premium Pet Transportation Services</p>
                     </div>
                     <p>Licensed, insured, and dedicated to the safe transport of your beloved pets worldwide.</p>
                 </div>
@@ -439,7 +424,6 @@
                     <ul>
                         <li>Track Your Pet</li>
                         <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li>Contact Us</li>
                     </ul>
                 </div>
@@ -454,7 +438,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | <a href="privacy-policy.html" style="color: #9ca3af;">Privacy Policy</a> | Terms of Service</p>
+                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
@@ -496,26 +480,8 @@
         // Form submission handlers
         document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Redirect to thank you page
-            window.location.href = 'thankyou.html';
-        });
-
-        // Contact form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Track Google Ads conversion
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-17538330823/contact_form_submit',
-                    'value': 1.0,
-                    'currency': 'USD'
-                });
-                console.log('Google Ads conversion tracked: contact_form_submit');
-            }
-            
-            // Redirect to thank you page
-            window.location.href = 'thankyou.html';
+            alert('Thank you for your quote request! We will contact you within 24 hours.');
+            closeQuoteForm();
         });
 
         // Tracking form handlers
@@ -543,6 +509,5 @@
             resultsDiv.style.display = 'block';
         }
     </script>
-    
 </body>
 </html>
