@@ -78,6 +78,29 @@ p {
     height: 80px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+}
+
+.footer-logo-img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .logo h1 {
     font-size: 1.875rem;
     color: #2563eb;
