@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logo Check - PCS Pet Shipper</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+        .test { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .logo-test { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; margin: 10px 0; }
+        .success { border-left: 4px solid #28a745; }
+        .error { border-left: 4px solid #dc3545; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Logo Display Check</h1>
+    
+    <div class="test">
+        <h2>Logo Test</h2>
+        <div class="logo-test" id="logoTest">
+            <img src="./assets/images/patriotic-pet-shipper-logo.png" alt="PCS Pet Shipper Logo" style="width: 50px; height: 50px; object-fit: contain;" id="logoImg">
+            <div>
+                <h3>PCS Pet Shipper</h3>
+                <p>Premium Pet Transport</p>
+            </div>
+        </div>
+        <p><strong>File Path:</strong> ./assets/images/patriotic-pet-shipper-logo.png</p>
+        <p id="status">Checking...</p>
+    </div>
+    
+    <div class="test">
+        <h2>File Access Test</h2>
+        <p>Direct link to logo: <a href="./assets/images/patriotic-pet-shipper-logo.png" target="_blank">Click to open logo</a></p>
+    </div>
+    
+    <div class="test">
+        <h2>Updated Pages</h2>
+        <p>Logo has been fixed on:</p>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="book-transport.html">Book Transport</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="thankyou.html">Thank You</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        const img = document.getElementById('logoImg');
+        const status = document.getElementById('status');
+        const test = document.getElementById('logoTest');
+        
+        img.onload = function() {
+            status.textContent = '✅ Logo loaded successfully!';
+            test.className += ' success';
+        };
+        
+        img.onerror = function() {
+            status.textContent = '❌ Logo failed to load - check file path';
+            test.className += ' error';
+        };
+    </script>
+</body>
+</html>

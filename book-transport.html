@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Pet Transport - PCS Pet Shipper</title>
+    <meta name="description" content="Book safe, professional pet transportation services with PCS Pet Shipper. Get your free quote today for domestic and international pet shipping.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Ads Global Tag (gtag.js) - Simplified Implementation -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17538330823"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17538330823');
+    </script>
+    <style>
+        .landing-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .landing-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .landing-hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button-large {
+            background: #ffffff;
+            color: #667eea;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        .cta-button-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .form-section {
+            background: white;
+            padding: 60px 0;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #f8fafc;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .benefit-icon {
+            margin-bottom: 20px;
+        }
+        .stats-bar {
+            background: #1f2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #60a5fa;
+        }
+        .testimonial-landing {
+            background: #f8fafc;
+            padding: 60px 0;
+        }
+        .testimonial-card-landing {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .quote-form {
+            display: grid;
+            gap: 20px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .landing-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./assets/images/patriotic-pet-shipper-logo.png" alt="PCS Pet Shipper Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1><a href="index.html" style="text-decoration: none; color: inherit;">PCS Pet Shipper</a></h1>
+                        <span>Premium Pet Transport</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="index.html#tracking" class="track-link">Track My Pet</a></li>
+                </ul>
+                <button class="cta-button" onclick="document.getElementById('bookingForm').scrollIntoView({behavior: 'smooth'})">Get Quote</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="landing-hero">
+            <div class="container">
+                <h1>Book Safe Pet Transportation Today</h1>
+                <p>Professional, caring, and reliable pet shipping services with 24/7 monitoring. Your pet's comfort and safety is our priority.</p>
+                <div>
+                    <a href="#bookingForm" class="cta-button-large">Get Free Quote Now</a>
+                    <a href="tel:" class="cta-button-large" style="background: transparent; color: white; border: 2px solid white;">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators -->
+        <section class="stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>10K+</h3>
+                        <p>Pets Safely Transported</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>99.8%</h3>
+                        <p>On-Time Delivery Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Monitoring & Support</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="form-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose PCS Pet Shipper?</h2>
+                    <p>Professional pet transportation with unmatched care and reliability</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt" style="font-size: 48px; color: #059669;"></i>
+                        </div>
+                        <h3>Licensed & Insured</h3>
+                        <p>Fully licensed pet transportation company with comprehensive insurance coverage for your peace of mind.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart" style="font-size: 48px; color: #dc2626;"></i>
+                        </div>
+                        <h3>Pet Care Specialists</h3>
+                        <p>Our certified animal handling specialists treat your pet like family throughout the entire journey.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-globe" style="font-size: 48px; color: #2563eb;"></i>
+                        </div>
+                        <h3>Worldwide Service</h3>
+                        <p>Domestic and international pet transportation to over 100 countries with expert documentation handling.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock" style="font-size: 48px; color: #7c3aed;"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock monitoring and customer support with real-time updates on your pet's journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section id="bookingForm" class="form-section" style="background: #eff6ff;">
+            <div class="container">
+                <div class="form-container">
+                    <h2>Get Your Free Pet Transport Quote</h2>
+                    <p>Complete the form below and we'll provide a detailed quote within 24 hours</p>
+                    
+                    <form class="quote-form" id="landingQuoteForm">
+                        <!-- Contact Information -->
+                        <div class="form-section">
+                            <h3 style="color: #1f2937; margin-bottom: 20px;">Contact Information</h3>
+                            <div class="form-group">
+                                <label for="fullName">Full Name*</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Please include your full name" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address*</label>
+                                    <input type="email" id="email" name="email" placeholder="Please double check address is correct" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone (Include country code if outside USA)*</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Travel Information -->
+                        <div class="form-section">
+                            <h3 style="color: #1f2937; margin-bottom: 20px;">Travel Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="travelFrom">Where is your pet traveling from? (City and State)*</label>
+                                    <input type="text" id="travelFrom" name="travelFrom" placeholder="Enter the city where your pet is now" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="travelTo">Where is your pet traveling to?*</label>
+                                    <input type="text" id="travelTo" name="travelTo" placeholder="What city, state, or country is your pet traveling to?" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="travelDate">When is your pet travelling?*</label>
+                                    <input type="text" id="travelDate" name="travelDate" placeholder="Enter approximate travel dates" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="military">Military/PCS Orders Related Travel?*</label>
+                                    <select id="military" name="military" required>
+                                        <option value="">Please select</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pet Information -->
+                        <div class="form-section">
+                            <h3 style="color: #1f2937; margin-bottom: 20px;">Pet Information</h3>
+                            <p class="form-note">For multiple pets, separate info with commas please. (Measurements not required for cats)</p>
+                            
+                            <div class="form-group">
+                                <label for="petNames">Pet Name(s)</label>
+                                <input type="text" id="petNames" name="petNames" placeholder="Enter pet Name(s)">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="petLength">Length of pet from tip of nose to base of tail (do not include tail please)*</label>
+                                    <input type="number" id="petLength" name="petLength" placeholder="Enter length in inches" step="0.5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="petWidth">Width of your pet across the shoulders*</label>
+                                    <input type="number" id="petWidth" name="petWidth" placeholder="Enter width in inches" step="0.5" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="petHeight">Height of pet when sitting to top of head (include ears if they stick up)*</label>
+                                    <input type="number" id="petHeight" name="petHeight" placeholder="Enter sitting height in inches" step="0.5" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="petWeight">Pet's weight</label>
+                                    <input type="number" id="petWeight" name="petWeight" placeholder="Enter weight in pounds">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="petBreed">What is your pets breed?*</label>
+                                    <input type="text" id="petBreed" name="petBreed" placeholder="Enter breed" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="petAge">How old is your pet?*</label>
+                                    <input type="text" id="petAge" name="petAge" placeholder="Enter age" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="crateDimensions">Crate Dimensions</label>
+                                <input type="text" id="crateDimensions" name="crateDimensions" placeholder="If you have travel crates already please include the length of each crate">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="additionalInfo">Anything else we should know?</label>
+                                <textarea id="additionalInfo" name="additionalInfo" rows="4" placeholder="Share any other details here"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="primary-btn" style="padding: 15px 30px; font-size: 1.1rem;">Get My Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonial-landing">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 50px;">What Pet Parents Say</h2>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="testimonial-card-landing">
+                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                            <div class="testimonial-img" style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px; margin-right: 15px;">
+                                SJ
+                            </div>
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <span style="color: #64748b;">Golden Retriever Owner</span>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: #374151;">"PCS Pet Shipper made our cross-country move stress-free. They treated Luna like family and kept us updated every step of the way. I couldn't have asked for better service."</p>
+                    </div>
+                    
+                    <div class="testimonial-card-landing">
+                        <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                            <div class="testimonial-img" style="width: 60px; height: 60px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 24px; margin-right: 15px;">
+                                MC
+                            </div>
+                            <div>
+                                <h4>Michael Chen</h4>
+                                <span style="color: #64748b;">Cat Owner</span>
+                            </div>
+                        </div>
+                        <p style="font-style: italic; color: #374151;">"Professional, caring, and reliable. They handled all the paperwork for our international move and our cats arrived safely in Germany. Worth every penny."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section style="background: #1f2937; color: white; padding: 60px 0; text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px;">Ready to Book Your Pet's Safe Journey?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9;">Join thousands of satisfied pet parents who trust PCS Pet Shipper</p>
+                <a href="#bookingForm" class="cta-button-large" style="background: #60a5fa; color: white;">Get Started Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="./assets/images/patriotic-pet-shipper-logo.png" alt="PCS Pet Shipper Logo" class="footer-logo-img">
+                        <div class="logo-text">
+                            <h3>PCS Pet Shipper</h3>
+                            <p>Premium Pet Transportation Services</p>
+                        </div>
+                    </div>
+                    <p>Licensed, insured, and dedicated to the safe transport of your beloved pets worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Domestic Shipping</li>
+                        <li>International Relocation</li>
+                        <li>Emergency Transport</li>
+                        <li>Custom Solutions</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li>Track Your Pet</li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                        <li>LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PCS Pet Shipper. All rights reserved. | <a href="privacy-policy.html" style="color: #9ca3af;">Privacy Policy</a> | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('landingQuoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Track Google Ads conversion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17538330823/quote_form_submit',
+                    'value': 1.0,
+                    'currency': 'USD'
+                });
+                console.log('Google Ads conversion tracked: quote_form_submit');
+            }
+            
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
+        });
+
+        // Add form validation styling
+        document.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value) {
+                    this.style.borderColor = '#ef4444';
+                } else {
+                    this.style.borderColor = '#d1d5db';
+                }
+            });
+        });
+    </script>
+    
+    <!-- Image Management Script -->
+    <script src="/assets/images/check-images.js"></script>
+</body>
+</html>
