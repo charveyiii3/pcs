@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Google Ads Global Tag (gtag.js) - Simplified Implementation -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17538330823"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17538330823">
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'AW-17538330823');
     </script>
     <style>
@@ -136,8 +138,8 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="./assets/images/patriotic-pet-shipper-logo.png" alt="PCS Pet Shipper Logo" class="logo-img">
-                    <div class="logo-text">
+                    
+                    
                         <h1><a href="index.html" style="text-decoration: none; color: inherit;">PCS Pet Shipper</a></h1>
                         <span>Premium Pet Transport</span>
                     </div>
@@ -238,7 +240,7 @@
                     <h2>Get Your Free Pet Transport Quote</h2>
                     <p>Complete the form below and we'll provide a detailed quote within 24 hours</p>
                     
-                    <form class="quote-form" id="landingQuoteForm">
+                    <form class="quote-form" id="landingQuoteForm" name="quote-request" method="POST" data-netlify="true">
                         <!-- Contact Information -->
                         <div class="form-section">
                             <h3 style="color: #1f2937; margin-bottom: 20px;">Contact Information</h3>
@@ -396,8 +398,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="logo">
-                        <img src="./assets/images/patriotic-pet-shipper-logo.png" alt="PCS Pet Shipper Logo" class="footer-logo-img">
-                        <div class="logo-text">
+                        
+                        
                             <h3>PCS Pet Shipper</h3>
                             <p>Premium Pet Transportation Services</p>
                         </div>
@@ -455,8 +457,6 @@
 
         // Form submission handler
         document.getElementById('landingQuoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Track Google Ads conversion
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'conversion', {
@@ -467,8 +467,10 @@
                 console.log('Google Ads conversion tracked: quote_form_submit');
             }
             
-            // Redirect to thank you page
-            window.location.href = 'thankyou.html';
+            // Form will submit to Netlify, then redirect
+            setTimeout(() => {
+                window.location.href = 'thankyou.html';
+            }, 500);
         });
 
         // Add form validation styling
